@@ -1,0 +1,64 @@
+{
+	"name": "block-comments",
+	"displayName": "Block Comments",
+	"description": "A extension which creates highly visible attractive comments in your project. for more readability.",
+	"version": "0.0.1",
+	"icon": "images/logo.png",
+	"engines": {
+		"vscode": "^1.64.0"
+	},
+	"publisher": "SanchitVerma",
+	"categories": [
+		"Other"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sanchitverma168/block-comments"
+	},
+	"keywords": [
+		"comments",
+		"better comments",
+		"multiline comments",
+		"block comments",
+		"block",
+		"mulitline",
+		"single line comment",
+		"line",
+		"single",
+		"better",
+		"best"
+	],
+	"activationEvents": [
+		"onCommand:block-comments.helloWorld"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [{
+			"command": "block-comments.helloWorld",
+			"title": "Create a Block Comment here"
+		}],
+		"keybindings": [{
+			"key": "ctrl+alt+home",
+			"command": "block-comments.helloWorld"
+		}]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.2.2",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.64.0",
+		"eslint": "^7.27.0",
+		"glob": "^7.1.7",
+		"mocha": "^8.4.0",
+		"typescript": "^4.3.2",
+		"vscode-test": "^1.5.2"
+	},
+	"dependencies": {
+		"fs": "^0.0.1-security"
+	}
+}
