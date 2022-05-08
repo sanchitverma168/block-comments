@@ -10,6 +10,8 @@ Here is an screenshot attached for you reference how the editor will look after 
 
 ![alt](images/ss1.png)
 
+> Suggesstions are highly accepted. Please do suggest or fork the repo. to make it better.
+
 ## Uses Information
 
 > Press `Ctrl +alt + Home` to create a comment in the current line.
