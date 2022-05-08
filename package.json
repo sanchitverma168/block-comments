@@ -2,7 +2,7 @@
 	"name": "block-comments",
 	"displayName": "Block Comments",
 	"description": "A extension which creates highly visible attractive comments in your project. for more readability.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"icon": "images/logo.png",
 	"engines": {
 		"vscode": "^1.64.0"

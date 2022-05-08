@@ -39,7 +39,7 @@ async function activate(context) {
 				// let fc = fs.readFileSync(filename);
 				var array = fs.readFileSync(filename).toString().split("\n");
 				var dash = "// ! ||";
-				let totallength = 30;
+				const totallength = 80;
 				for (let j = 0; j < totallength; j++) {
 					dash = dash + "-";
 				}
@@ -47,7 +47,8 @@ async function activate(context) {
 
 				for (let i in array) {
 					if (parseInt(i) == curPos.line) {
-						let length = array[i].length;
+						let  text= array[i].trim();
+						let length = text.length;
 						console.log("length: tlength:" + totallength + length);
 						if (length == 0) {
 							vscode.window.showErrorMessage("Enter Some Text");
@@ -57,7 +58,7 @@ async function activate(context) {
 						} else {
 							let left = length % 2 == 0 ? Math.round(length / 2) : Math.round(length / 2) - 1;
 							let right = length % 2 == 0 ? length / 2 : Math.round(length / 2);
-							let temp = array[i];
+							let temp = text;
 							let leftvalue = "// ! ||";
 							let rightvalue = "";
 							for (let q = 0; q < totallength / 2 - left; q++) {
@@ -67,17 +68,20 @@ async function activate(context) {
 								rightvalue = rightvalue + " ";
 							}
 							rightvalue += "||"
-							console.log("length :" + length);
-							console.log("l/2 :" + length / 2);
-							console.log("left :" + left);
-							console.log("right :" + right);
-							console.log("temp :" + temp);
-							console.log("lvalue :" + leftvalue);
-							console.log("rvalue :" + rightvalue);
+							// console.log("length :" + length);
+							// console.log("l/2 :" + length / 2);
+							// console.log("left :" + left);
+							// console.log("right :" + right);
+							// console.log("temp :" + temp);
+							// console.log("lvalue :" + leftvalue);
+							// console.log("rvalue :" + rightvalue);
 							array[i] = dash + "\n" + leftvalue + temp + rightvalue + "\n" + dash;
 							vscode.window.showInformationMessage('Comment Created Successfully');
 						}
 					}
+// ! ||------------------------------||
+// ! ||         					asdfasf         ||
+// ! ||------------------------------||
 					// console.log(array[i]);
 				}
 				fs.writeFile(filename, array.join("\n"), function (err) {

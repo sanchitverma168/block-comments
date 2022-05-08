@@ -1,0 +1,7 @@
+0.0.1
+first version only with creating a block comment released.
+
+
+0.0.2
+text limit increased from 30 to 80
+text trim added so that empty space should be removed from the string.
